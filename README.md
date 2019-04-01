@@ -1,4 +1,6 @@
-# Run site
+# Coursera "HTML, CSS, and Javascript for Web Developers" course
+
+## How to run website
 
 Browse to `./site` and run:
 
