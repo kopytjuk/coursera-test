@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Test site</title>
+    <style>
+
+      /* Make element big and blue when hovering over it */
+      /* a > div:hover {color: blue; font-size: 35px} */
+
+      /* will set the font size of 'Div 5' text to 24px when the user hovers the mouse over ANY area inside the 'a' element*/
+      a:hover div:nth-child(5) {
+        font-size: 24px;
+      }
+        
+    </style>
+</head>
+<body>
+    <a>
+        <div>Div 1</div>
+        <div>Div 2</div>
+        <div>Div 3</div>
+        <div>Div 4</div>
+        <div>Div 5</div>
+        <div>Div 6</div>
+      </a>
+</body>
+</html>
