@@ -1,0 +1,12 @@
+.paragraphBlock {
+    color: black;
+    font-style: "Georgia", "Times New Roman"
+}
+
+#contentList li:hover {
+    font-size: 130%
+}
+
+#contentList a:visited {
+    color: black
+}
