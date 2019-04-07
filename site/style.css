@@ -1,6 +1,6 @@
 .paragraphBlock {
     color: black;
-    font-style: "Georgia", "Times New Roman"
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #contentList li{
