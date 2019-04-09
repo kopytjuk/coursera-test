@@ -4,3 +4,17 @@ body {
     background: #61122f;
     font-family: 'Oxygen', sans-serif;
 }
+
+#header-nav {
+    background-color: #f6b319;
+    border-radius: 0px;
+    border: 0;
+}
+
+#logo-img {
+    background: url(../images/headerlogo.png) no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    margin: 10px 15px 10px 0px;
+}
