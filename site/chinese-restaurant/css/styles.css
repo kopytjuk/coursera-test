@@ -12,9 +12,22 @@ body {
 }
 
 #logo-img {
-    background: url(../images/headerlogo.png) no-repeat;
+    background: url(../images/headerlogo2.png) no-repeat;
     background-size: contain;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     margin: 10px 15px 10px 0px;
+}
+
+#headerTitle {
+    font-family: 'Sacramento', cursive;
+    font-size: 50px;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+    text-decoration: none;
+}
+
+.navbar-brand p span {
+    vertical-align: middle
 }
