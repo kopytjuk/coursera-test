@@ -21,11 +21,10 @@
 
 <body>
     <header>
-      <div class="container-fluid">
-        <nav id="header-nav" class="navbar navbar-expand-lg navbar-expand-xl navbar-light">
-
+      <nav id="header-nav" class="navbar navbar-expand-lg navbar-expand-xl navbar-light">
+        <div class="container">
           <div class="navbar-brand">
-              <a href="index.html" class="float-left d-none d-sm-none d-md-block d-lg-block d-xl-block">
+              <a href="index.html" class="d-none d-sm-none d-md-block d-lg-block d-xl-block">
                   <div id="logo-img" alt="Logo image"></div>
               </a>
           </div>
@@ -62,9 +61,15 @@
                 </li>
               </ul>
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
+
+    <div id="main-content" class="container">
+      <div class="jumbotron">
+        <img src="images/jumbotron_768.jpg" alt="some picture" class="img-fluid d-block d-sm-none"></img>
+      </div>
+    </div>
 
     <!-- jQuery (Bootstrap JS plugins depend on it) -->
     <script src="js/jquery-3.3.1.min.js"></script>
