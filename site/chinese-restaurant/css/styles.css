@@ -31,3 +31,12 @@ body {
 .navbar-brand p span {
     vertical-align: middle
 }
+
+#nav-list li {
+    text-align: center
+}
+
+#nav-list a:hover {
+    background: #e7e7e7;
+    font-size: 100%;
+}
