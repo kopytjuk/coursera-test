@@ -24,7 +24,7 @@ body {
     font-size: 40px;
 }
 
-.navbar-brand a:hover, .navbar-brand a:focus {
+#nav-header-content a:hover, #nav-header-content a:focus {
     text-decoration: none;
 }
 
