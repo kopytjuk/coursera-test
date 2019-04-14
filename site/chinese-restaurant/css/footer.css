@@ -1,0 +1,36 @@
+.panel-footer hr {
+    border-top: 1px solid white;
+}
+
+.panel-footer {
+    margin-top: 20px;
+    background: grey;
+}
+
+.panel-footer section {
+    margin-top: 20px;
+    line-height: 200%;
+}
+
+.panel-footer section span {
+    font-size: 1.5em;
+}
+
+@media (max-width: 576px) {
+
+    .panel-footer {
+        margin-top: 20px;
+    }
+
+    .panel-footer section {
+        margin-top: 10px;
+        text-align: center;
+        line-height: 200%;
+    }
+
+    .panel-footer hr {
+        color: white;
+        width: 50%
+    }
+
+}
