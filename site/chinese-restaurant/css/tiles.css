@@ -1,0 +1,38 @@
+#home-tiles a:hover, #home-tiles  a:focus {
+    text-decoration: none;
+}
+
+#menu-tile, #specials-tile, #map-tile {
+    height: 250px;
+    width: 100%;
+    margin-bottom: 15px;
+    position: relative;
+    border: 2px solid #3f0c1f;
+    overflow: hidden;
+}
+
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+    box-shadow: 0 0 5px 2px #cccccc;
+}
+
+#menu-tile {
+    background: url('../images/menu-tile.jpg') no-repeat center;
+}
+
+#specials-tile {
+    background: url('../images/specials-tile.jpg') no-repeat center;
+}
+
+/** we will position the spans within the tiles absolutely**/
+#home-tiles span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%; /* relative to the parents div container*/
+    text-align: center;
+    font-size: 1.6em;
+    text-transform: uppercase;
+    background-color: #000;
+    color: #fff;
+    opacity: 0.8;
+}
