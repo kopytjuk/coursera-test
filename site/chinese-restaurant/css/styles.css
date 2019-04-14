@@ -12,7 +12,7 @@ body {
 }
 
 #logo-img {
-    background: url(../images/headerlogo2.png) no-repeat;
+    background: url(../images/chinalogo.png) no-repeat;
     background-size: contain;
     height: 150px;
     width: 150px;
@@ -20,7 +20,8 @@ body {
 }
 
 #headerTitle {
-    font-family: 'Great Vibes', cursive;
+    /*font-family: 'Great Vibes', cursive; */
+    font-family: 'Lora', serif;
     font-size: 40px;
 }
 
