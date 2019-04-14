@@ -41,6 +41,13 @@ body {
     font-size: 100%;
 }
 
+/** main page **/
+
+.container .jumbotron {
+    box-shadow: 0 0 50px #3f0c1f;
+    border: 2px solid #3f0c1f;
+}
+
 /********** Extra small devices only **********/
 @media (max-width: 576px) {
     /* Header */
