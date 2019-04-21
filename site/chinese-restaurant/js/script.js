@@ -76,6 +76,7 @@ $( function () { // same as document.addEventListener("DOMContentLoaded", ...)
 
     dc.loadMenuCategories = function() {
         showLoading("#main-content");
+        switchMenuToActive();
         $.get(allCategoriesUrl, "", buildAndShowCategoriesHTML, "json");
     };
 
@@ -91,6 +92,8 @@ $( function () { // same as document.addEventListener("DOMContentLoaded", ...)
         headerHtml = insertProperty(headerHtml, "special_instructions", category_json.category.special_instructions)
 
         menu_items = category_json.menu_items
+
+        console.log(menu_items)
 
         var contentHtml = "<section class='row'>";
 
@@ -108,6 +111,8 @@ $( function () { // same as document.addEventListener("DOMContentLoaded", ...)
             itemHtml = insertProperty(itemHtml, "price_large", menu_item.price_large);
             itemHtml = insertProperty(itemHtml, "large_portion_name", menu_item.large_portion_name);
             
+            contentHtml += itemHtml
+            console.log(itemHtml)
         }
 
         contentHtml += "</section>"
@@ -119,16 +124,30 @@ $( function () { // same as document.addEventListener("DOMContentLoaded", ...)
         $.get(menuitemsTitleHtml, "", function (menuitemsTitleHtmlData, status, jqXHR){
             $.get(menuitemsContentHtml, "", function (menuitemsContentHtmlData, status, jqXHR){
                 var singleCategoryView = buildSingleCategoryPage(category_json, menuitemsTitleHtmlData, menuitemsContentHtmlData);
+                console.log(category_json)
                 insertHtml("#main-content", singleCategoryView);
             });
         });
     }
 
+    // functionality to highlight the current Nav element in the header
+
+    function switchMenuToActive () {
+        var classes = $("#navHomeButton")[0].className;
+        classes = classes.replace(new RegExp("active", "g"), "")
+        $("#navHomeButton")[0].className = classes
+
+        // set active state to the button if it isn't already there
+        classes = $("#navMenuButton")[0].className
+        if (classes.indexOf("active") == -1){
+            $("#navMenuButton")[0].className += " active"
+        }
+    }
+
     dc.loadMenuItem = function (category) {
+        switchMenuToActive();
         $.get(singleCategoryUrl+"?category="+category, "", buildAndShowSingleCategory, "json");
     };
-    
-
     
     global.$dc = dc
 })(window);
