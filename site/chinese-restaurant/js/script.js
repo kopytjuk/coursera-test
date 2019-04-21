@@ -92,14 +92,15 @@ $( function () { // same as document.addEventListener("DOMContentLoaded", ...)
 
         menu_items = category_json.menu_items
 
-        contentHtml = "<section class='row'>
+        var contentHtml = "<section class='row'>";
 
         for (var i=0; i < menu_items.length; i++) {
             menu_item = menu_items[i];
             itemHtml = menuitemsContentHtmlData;
             itemHtml = insertProperty(itemHtml, "name", menu_item.name);
             itemHtml = insertProperty(itemHtml, "short_name", menu_item.short_name);
-            itemHtml = insertProperty(itemHtml, "category", category_json.category.name);
+            itemHtml = insertProperty(itemHtml, "description", menu_item.description);
+            itemHtml = insertProperty(itemHtml, "category", category_json.category.short_name);
 
             // ${{price_small}}<span> ({{small_portion_name}})</span> ${{price_large}}<span> ({{small_portion_name}})</span>
             itemHtml = insertProperty(itemHtml, "price_small", menu_item.price_small);
@@ -107,12 +108,11 @@ $( function () { // same as document.addEventListener("DOMContentLoaded", ...)
             itemHtml = insertProperty(itemHtml, "price_large", menu_item.price_large);
             itemHtml = insertProperty(itemHtml, "large_portion_name", menu_item.large_portion_name);
             
-            contentHtml += itemHtml
         }
 
         contentHtml += "</section>"
 
-        return viewHtml+contentHtml
+        return headerHtml+contentHtml
     }
 
     function buildAndShowSingleCategory (category_json, status, jqXHR) {
